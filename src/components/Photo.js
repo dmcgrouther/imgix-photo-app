@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import Color from './Color';
+import './Photo.css';
 
 function Photo() {
-  const [text, setText] = useState("");
-  const [color, setColor] = useState("");
+  const [text, setText] = useState("Enter text here to put on picture.");
+  const [color, setColor] = useState("000000");
 
-  const handleChange = (newColor) => {
+  const handleColorChange = (newColor) => {
     setColor(newColor)
   }
 
@@ -35,15 +36,18 @@ function Photo() {
 
   return(
     <div>
-      <label>
-      Text To Display
-      {text}
-      <textarea value={text} onChange={e => setText(e.target.value)} />
-      </label>
-      
-      <input type="submit" value="Submit" onClick={handleSubmit} />
-
-      <Color value={color} onChange={handleChange} />
+      <h1>Photo Booth</h1>
+      <br />
+      <div className='text-part'>
+        <h2>Enter Text Below</h2>
+        <textarea value={text} onChange={e => setText(e.target.value)} />
+        {/* <input type="submit" value="Submit" onClick={handleSubmit} /> */}
+      </div>
+      <div className='color-part'>
+        <h2>Select your color below</h2>
+        <Color value={color} onChange={handleColorChange} />
+      </div>
+      <button type="submit" value="Submit" onClick={handleSubmit}>Submit</button>
     </div>
   )
 }
