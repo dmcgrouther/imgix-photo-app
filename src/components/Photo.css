@@ -4,13 +4,21 @@
   margin-right: 10vw;
 } */
 
+h1, h2, h4 {
+  color: white;
+}
+
+* {
+  font-family: 'Times New Roman', Times, serif;
+}
+
 .text-part {
   /* position: absolute; */
   left: 50%;
 }
 
 textarea {
-  width: 300px;
+  width: 250px;
 }
 
 /* .color-part {

@@ -9,7 +9,7 @@ class Color extends React.Component {
 
   handleChangeComplete = (color) => {
     this.setState({ background: color.hex });
-    console.log(this.state.background)
+    // console.log(this.state.background)
     this.props.onChange(color.hex);
   };
 
